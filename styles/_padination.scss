@@ -1,0 +1,31 @@
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+
+  li {
+    a {
+      border: 1px solid;
+      padding: 10px;
+
+      @apply border-gray;
+
+      &:hover {
+        @apply bg-bm-red text-white;
+      }
+    }
+
+    &.disabled {
+      a {
+        opacity: 0.4;
+        cursor: auto;
+      }
+    }
+
+    &.active {
+      a {
+        @apply bg-bm-red text-white;
+      }
+    }
+  }
+}

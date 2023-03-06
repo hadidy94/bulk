@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'fonts';
+@import 'buttons';
+@import 'react-toastify/dist/ReactToastify.css';
+@import 'tabs';
+@import 'padination';
+
+$ltr-font: 'itc_avant_garde_std', sans-serif;
+
+body {
+  @apply bg-light-grey;
+
+  font-family: $ltr-font;
+  min-height: 100vh;
+}

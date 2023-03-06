@@ -1,0 +1,43 @@
+.btn,
+.ant-btn {
+  @apply transition-colors duration-200 transform py-2 px-6 h-auto;
+
+  border: none;
+}
+
+.btn-bm,
+.ant-btn-primary {
+  @apply bg-bm-red text-white;
+
+  &:hover,
+  &:focus {
+    @apply bg-bm-red-600 outline-none;
+  }
+}
+
+.btn-secondary-bm {
+  @apply bg-bm-black text-white;
+
+  &:hover,
+  &:focus {
+    @apply bg-bm-red-600 outline-none;
+  }
+}
+
+.btn-gray {
+  @apply bg-gray text-bm-black;
+
+  &:hover,
+  &:focus {
+    @apply bg-gray-600 text-bm-black;
+  }
+}
+
+.btn-dark-gray {
+  @apply bg-dark-gray text-bm-black;
+
+  &:hover,
+  &:focus {
+    @apply bg-gray-600 text-bm-black;
+  }
+}
