@@ -8,7 +8,6 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import Layout from '@/components/Layout/Layout';
 import { SessionProvider } from "next-auth/react";
 import { ToastContainer } from "react-toastify";
-import { appWithTranslation } from "next-i18next";
 import { Button, ConfigProvider } from 'antd';
 
 
@@ -66,4 +65,4 @@ function App({ Component,
   )
 }
 
-export default appWithTranslation(App);
+export default App;
