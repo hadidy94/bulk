@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 
-import Link from 'next/link';
+import Link from '../Link';
 import ModelUI from '../UI/ModelUI';
 // import { Button } from '../UI/Button';
 import { deleteProductById, deleteMultibleProducts } from '@/helpers/api/products';

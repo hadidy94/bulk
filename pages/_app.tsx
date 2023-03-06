@@ -10,6 +10,7 @@ import { SessionProvider } from "next-auth/react";
 import { ToastContainer } from "react-toastify";
 import { Button, ConfigProvider } from 'antd';
 
+import { appWithTranslation } from 'next-i18next'
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -65,4 +66,4 @@ function App({ Component,
   )
 }
 
-export default App;
+export default appWithTranslation(App);

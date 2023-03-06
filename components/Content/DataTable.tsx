@@ -7,7 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Link from 'next/link';
+import Link from '../Link';
 import ModelUI from '../UI/ModelUI';
 import { Button } from '../UI/Button';
 import { deleteProductById, deleteMultibleProducts } from '@/helpers/api/products';

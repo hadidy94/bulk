@@ -5,7 +5,7 @@ import type { ColumnsType, TableProps } from 'antd/es/table';
 import { deleteBulkList } from '../../helpers/api/upload-template';
 
 
-import Link from 'next/link';
+import Link from '../Link';
 import toast from "../Toast";
 
 

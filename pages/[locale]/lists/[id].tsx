@@ -2,12 +2,12 @@ import { useState, useEffect, useMemo } from 'react';
 import { getSession } from 'next-auth/react';
 import { dehydrate, QueryClient, useQuery, QueryCache } from 'react-query';
 import { useRouter } from 'next/router';
-import { Button } from '../../components/UI/Button';
+import { Button } from '../../../components/UI/Button';
 import { getListById } from '@/helpers/api/upload-template';
 import ModelUI from '@/components/UI/ModelUI';
 
-import DataTableSec from '../../components/Content/DataTableSec';
-import PageHeader from '../../components/Layout/PageHeader';
+import DataTableSec from '../../../components/Content/DataTableSec';
+import PageHeader from '../../../components/Layout/PageHeader';
 import TabPanel from '@/components/UI/TabPanel';
 import { Spin, Tabs } from 'antd';
 import type { TabsProps } from 'antd';
@@ -143,28 +143,28 @@ function ListByID() {
   );
 }
 
-export async function getServerSideProps(context) {
-  const session = await getSession({ req: context.req });
-  const { id } = context.params;
-  const queryClient = new QueryClient()
+// export async function getServerSideProps(context) {
+//   const session = await getSession({ req: context.req });
+//   const { id } = context.params;
+//   const queryClient = new QueryClient()
 
-  await queryClient.prefetchQuery(['list', id], () => getListById(id))
+//   await queryClient.prefetchQuery(['list', id], () => getListById(id))
 
-  if (!session) {
-    return {
-      redirect: {
-        destination: '/login',
-        permanent: false,
-      },
-    };
-  }
+//   if (!session) {
+//     return {
+//       redirect: {
+//         destination: '/login',
+//         permanent: false,
+//       },
+//     };
+//   }
 
-  return {
-    props: {
-      session,
-      dehydratedState: dehydrate(queryClient),
-    },
-  };
-}
+//   return {
+//     props: {
+//       session,
+//       dehydratedState: dehydrate(queryClient),
+//     },
+//   };
+// }
 
 export default ListByID;
