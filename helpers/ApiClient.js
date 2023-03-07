@@ -25,10 +25,11 @@ const ApiClient = () => {
             return response.data
         },
         async (error) => {
+            console.log(error.response.status);
 
-            // if (error.response.status == 401) {
-            //     await signOut();
-            // }
+            if (error.response.status == 401) {
+                await signOut();
+            }
             return Promise.reject(error.response);
 
         }
